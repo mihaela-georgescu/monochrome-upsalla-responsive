@@ -1,0 +1,26 @@
+.button {
+  display: inline-flex;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+
+  &-primary {
+    border-radius: 24px;
+    padding: 4px 12px;
+    text-transform: lowercase;
+    font-size: 16px;
+    cursor: pointer;
+
+    background: $background-light-gray;
+    border: 1px solid $background-dark-gray;
+    color: $gray-primary;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-out;
+
+    @include media-breakpoint-up(lg) {
+      &:hover {
+        background-color: $background-dark-gray;
+        color: $background-light-gray;
+      }
+    }
+  }
+}

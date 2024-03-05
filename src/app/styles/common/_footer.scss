@@ -1,0 +1,165 @@
+.footer {
+  background: linear-gradient(
+    180deg,
+    $background-dark-gray 45%,
+    $background-light-gray 0
+  );
+
+  @include media-breakpoint-up(lg) {
+    background: $background-light-gray;
+  }
+
+  &-inner {
+    width: 100%;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+      font-family: 'Playfair Display', sans-serif;
+      font-size: 22px;
+
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    & li {
+      padding: 6px 0;
+    }
+  }
+
+  &-contact {
+    @include media-breakpoint-up(lg) {
+      text-transform: lowercase;
+    }
+  }
+
+  h1 {
+    font-size: 22px;
+    font-family: 'Playfair Display', sans-serif;
+    padding-bottom: 24px;
+  }
+
+  &-nav {
+    color: $white;
+
+    padding: 32px 56px;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      color: unset;
+      padding: 0;
+
+      text-align: start;
+    }
+
+    &-main-list {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      gap: 16px;
+      text-transform: lowercase;
+      padding-bottom: 32px;
+
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+
+    &-subsq-list {
+      font-size: 14px;
+      font-style: italic;
+      text-decoration: underline;
+    }
+  }
+
+  &-connect {
+    padding: 32px 56px;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      text-align: start;
+      padding: 0;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .footer-newsletter {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 32px;
+
+      .email-subscription {
+        order: 1;
+
+        & input[type='email'] {
+          width: 50%;
+          height: 30px;
+          border: 1px solid $gray-secondary;
+          outline: none;
+          font-style: italic;
+          font-size: 14px;
+          padding: 0 8px;
+        }
+      }
+
+      .newsletter-consent {
+        order: 3;
+        text-align: left;
+        font-size: 14px;
+
+        display: grid;
+        grid-template-columns: 20px 1fr;
+        gap: 8px;
+        align-items: center;
+
+        @include media-breakpoint-up(lg) {
+          order: 2;
+        }
+
+        & input[type='checkbox'] {
+          width: 20px;
+          height: 20px;
+        }
+
+        & label {
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        & a[title='Privacy Policy'] {
+          text-decoration: underline;
+        }
+      }
+
+      button[type='submit'] {
+        order: 2;
+        margin: auto;
+        width: fit-content;
+        text-transform: uppercase;
+        font-size: 16px;
+
+        @include media-breakpoint-up(lg) {
+          order: 3;
+          text-align: start;
+          margin: 0;
+        }
+      }
+    }
+
+    .footer-social li {
+      display: inline-block;
+      margin-right: 12px;
+
+      i[class^='fa-brands'] {
+        font-size: 20px;
+      }
+    }
+  }
+}

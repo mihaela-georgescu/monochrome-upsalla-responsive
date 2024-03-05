@@ -1,0 +1,57 @@
+// fonts
+@import './styles/fonts';
+
+// import fontawesome
+@import './../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
+@import './../../node_modules/@fortawesome/fontawesome-free/css/brands.css';
+@import './../../node_modules/@fortawesome/fontawesome-free/css/regular.css';
+@import './../../node_modules/@fortawesome/fontawesome-free/css/solid.css';
+
+// import bootstrap
+@import './../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import './../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import './../../node_modules/bootstrap/scss/bootstrap-utilities.scss';
+
+@import './styles/variables';
+
+// common site components (header, footer)
+@import './styles/common/index';
+
+// homepage components
+@import './styles/home/index';
+
+// catalog components
+@import './styles/catalog/index';
+
+// ui
+@import './styles/ui/button';
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 22px;
+  font-family: 'Playfair Display', sans serif;
+  color: $gray-primary;
+}
+
+a,
+button,
+input[type='button'] {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

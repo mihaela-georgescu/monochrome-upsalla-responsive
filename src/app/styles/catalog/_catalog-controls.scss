@@ -1,0 +1,12 @@
+.catalog-controls {
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 18px;
+  text-transform: lowercase;
+
+  & a {
+    display: inline-block;
+    border-radius: 24px;
+    padding: 12px 16px;
+  }
+}

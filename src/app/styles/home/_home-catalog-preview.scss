@@ -1,0 +1,29 @@
+.home-catalog-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media-breakpoint-up(lg) {
+    gap: 24px;
+  }
+
+  & > header {
+    text-align: center;
+    padding: 8px;
+
+    border: 0;
+    border-top: 1px solid #cccccc;
+
+    h1 {
+      font-size: 18px;
+      line-height: 24px;
+      color: $gray-primary;
+      font-weight: 700;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+  }
+}

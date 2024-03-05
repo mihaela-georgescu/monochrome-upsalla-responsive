@@ -1,0 +1,169 @@
+.header {
+  &-secondary {
+    background: none;
+    text-align: center;
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: 600;
+
+    @include media-breakpoint-up(lg) {
+      background: $black url('../../../../public/images/banners/banner.png')
+        no-repeat center center / cover;
+      color: $white;
+      height: 500px;
+      width: 100vw;
+      text-align: center;
+      font-size: 16px;
+      line-height: 36px;
+    }
+
+    &-inner {
+      padding: 16px 32px;
+
+      @include media-breakpoint-up(lg) {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+    }
+  }
+
+  &-secondary-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-connect {
+    & ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+
+    & .social-icon {
+      font-size: 22px;
+
+      &:hover {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &-controls {
+    & ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+
+    & .control-icon {
+      color: $gray-primary;
+      font-size: 22px;
+
+      @include media-breakpoint-up(lg) {
+        &:hover {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  &-secondary-search form {
+    border: 1px solid $gray-secondary;
+    color: $gray-primary;
+    position: relative;
+    padding: 0 28px;
+
+    & button {
+      position: absolute;
+      cursor: pointer;
+      bottom: -2px;
+      left: 3px;
+      background-color: transparent;
+      border: 0;
+      color: $gray-primary;
+    }
+
+    & input {
+      outline: none;
+      background-color: transparent;
+      border: 0;
+      font-family: 'Roboto', sans-serif;
+
+      &::placeholder {
+        color: $gray-primary;
+      }
+    }
+  }
+
+  &-primary {
+    background: $gray-primary;
+    color: $background-light-gray;
+    text-align: center;
+    font-size: 19px;
+    line-height: 25px;
+
+    .header-menu {
+      @include media-breakpoint-up(lg) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+    }
+
+    & .primary-controls {
+      color: $white;
+
+      button > i[className*='fa-bars'] {
+        font-size: 28px;
+      }
+    }
+
+    &-search form {
+      border: 1px solid $white;
+      color: $white;
+      position: relative;
+      padding: 0 28px;
+      opacity: 50%;
+      display: flex;
+      flex-direction: row;
+
+      & button {
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        color: $white;
+      }
+
+      & input {
+        outline: none;
+        background-color: transparent;
+        border: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-style: italic;
+
+        &::placeholder {
+          color: $white;
+        }
+      }
+    }
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+
+    & a {
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 22px;
+      transition: color 0.2s linear;
+
+      &:hover {
+        color: $gray-tertiary;
+      }
+    }
+  }
+}
